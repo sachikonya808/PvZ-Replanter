@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PvZ-Replanter": {
+      "commandName": "Project",
+      "commandLineArgs": "decompress -spine"
+    }
+  }
+}
