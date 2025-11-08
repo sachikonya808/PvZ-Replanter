@@ -25,6 +25,16 @@ namespace PvZ_Replanter
                     {
                         return config.preview_bundle_location;
                     }
+
+                    if (flags.Contains("-music"))
+                    {
+                        return config.music_bundle_location;
+                    }
+
+                    if (flags.Contains("-almanac"))
+                    {
+                        return config.almanac_bundle_location;
+                    }
                 }
             }
 
@@ -35,6 +45,8 @@ namespace PvZ_Replanter
         {
             public string spine_bundle_location { get; set; }
             public string preview_bundle_location { get; set; }
+            public string music_bundle_location { get; set; }
+            public string almanac_bundle_location { get; set; }
         }
     }
 }

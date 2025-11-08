@@ -128,10 +128,6 @@ namespace PvZ_Replanter
             AssetsFileReader r = new AssetsFileReader(fs);
             instPkg.Read(r, true);
 
-            Console.WriteLine($"Installing emip...");
-            Console.WriteLine($"\n{instPkg.modName} by {instPkg.modCreators}\n");
-            Console.WriteLine(instPkg.modDescription);
-
             foreach (var affectedFile in instPkg.affectedFiles)
             {
                 string affectedFileName = Path.GetFileName(affectedFile.path);
@@ -142,6 +138,16 @@ namespace PvZ_Replanter
 
                 if (bakFile == null)
                         return;
+
+                if (!File.Exists(affectedFilePath))
+                {
+                    Console.WriteLine("\nCAB File not found (Unselected or wrong bundle?)\nSkipping...");
+                    continue;
+                }
+
+                Console.WriteLine($"Installing emip...");
+                Console.WriteLine($"\n{instPkg.modName} by {instPkg.modCreators}\n");
+                Console.WriteLine(instPkg.modDescription);
 
                 FileStream afs = File.OpenRead(affectedFilePath);
                 AssetsFileReader ar = new AssetsFileReader(afs);
@@ -169,7 +175,7 @@ namespace PvZ_Replanter
 
                 File.Delete(bakFile);
 
-                Console.WriteLine($"Done!");
+                Console.WriteLine($"Done!\n");
             }
 
             return;

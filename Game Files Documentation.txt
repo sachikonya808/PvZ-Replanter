@@ -1,0 +1,11 @@
+My own personal documentation about the bundle files for PvZ Replanted; Files subject to change!
+
+Bundles Location: ./Replanted_Data/StreamingAssets/aa/StandaloneWindows64
+
+./spineassets_assets_assets/art/characters/spine.bundle : Main on-field textures for the plants and the zombies
+
+./defaultlocalgroup_assets_assets/art/characters/previews_1c8b07f2ed4b49e58563b64b05c4c5fb.bundle : Hover sprite when you're about to place a Plant/Zombie
+
+./music_assets_all_c79897e4dc1bedcab76c0bb920650d5d.bundle : Game's music
+
+./uiatlasalmanac_assets_all.bundle : Almanac Assets (Backgrounds/Seed Packets (Plants)/Some UI elements)
