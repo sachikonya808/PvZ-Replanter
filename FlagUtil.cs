@@ -35,6 +35,14 @@ namespace PvZ_Replanter
                     {
                         return config.almanac_bundle_location;
                     }
+                    if (flags.Contains("-vfx"))
+                    {
+                        return config.vfx_bundle_location;
+                    }
+                    if (flags.Contains("-gameplayatlases"))
+                    {
+                        return config.gameplayatlases_bundle_location;
+                    }
                 }
             }
 
@@ -47,6 +55,8 @@ namespace PvZ_Replanter
             public string preview_bundle_location { get; set; }
             public string music_bundle_location { get; set; }
             public string almanac_bundle_location { get; set; }
+            public string vfx_bundle_location { get; set; }
+            public string gameplayatlases_bundle_location { get; set; }
         }
     }
 }

@@ -22,16 +22,21 @@ namespace PvZ_Replanter
             string game_location_read = args;
             Console.WriteLine("Alright, so it is " + game_location_read + ", lemme write that down");
             string spine_bundle_read = game_location_read + "\\Replanted_Data\\StreamingAssets\\aa\\StandaloneWindows64\\spineassets_assets_assets\\art\\characters\\spine.bundle";
-            string preview_bundle_read = game_location_read + "\\Replanted_Data\\StreamingAssets\\aa\\StandaloneWindows64\\defaultlocalgroup_assets_assets\\art\\characters\\previews_1c8b07f2ed4b49e58563b64b05c4c5fb.bundle";
-            string music_bundle_read = game_location_read + "\\Replanted_Data\\StreamingAssets\\aa\\StandaloneWindows64\\music_assets_all_c79897e4dc1bedcab76c0bb920650d5d.bundle";
+            string preview_bundle_read = game_location_read + "\\Replanted_Data\\StreamingAssets\\aa\\StandaloneWindows64\\defaultlocalgroup_assets_assets\\art\\characters\\previews_f999564bc5382eb85495ec50c887a03d.bundle";
+            string music_bundle_read = game_location_read + "\\Replanted_Data\\StreamingAssets\\aa\\StandaloneWindows64\\music_assets_all_5de2460ad7b9ca76c6155ba44375be9e.bundle";
             string almanac_bundle_read = game_location_read + "\\Replanted_Data\\StreamingAssets\\aa\\StandaloneWindows64\\uiatlasalmanac_assets_all.bundle";
+            string vfx_bundle_read = game_location_read + "\\Replanted_Data\\StreamingAssets\\aa\\StandaloneWindows64\\vfx_assets_all_428a4ff60351f78f9f63ac7570bf49dc.bundle";
+            string gameplayatlases_bundle_read = game_location_read + "\\Replanted_Data\\StreamingAssets\\aa\\StandaloneWindows64\\gameplayatlases_assets_all.bundle";
+
 
             var config = new
             {
                 spine_bundle_location = spine_bundle_read,
                 preview_bundle_location = preview_bundle_read,
                 music_bundle_location = music_bundle_read,
-                almanac_bundle_location = almanac_bundle_read
+                almanac_bundle_location = almanac_bundle_read,
+                vfx_bundle_location = vfx_bundle_read,
+                gameplayatlases_bundle_location = gameplayatlases_bundle_read
             };
 
             string jsonString = JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true });
@@ -84,6 +89,8 @@ namespace PvZ_Replanter
             public string preview_bundle_location { get; set; }
             public string music_bundle_location { get; set; }
             public string almanac_bundle_location { get; set; }
+            public string vfx_bundle_location { get; set; }
+            public string gameplayatlases_bundle_location { get; set; }
         }
     }
 }
